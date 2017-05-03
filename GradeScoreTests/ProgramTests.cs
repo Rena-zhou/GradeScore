@@ -22,7 +22,7 @@ namespace GradeScore.Tests
         [TestMethod()]
         public void ReadFileAndSaveIntoListTest_SUCCESS()
         {
-            string filename = Path.Combine(Environment.CurrentDirectory, "TestFiles\\names.txt");
+            string filename = (@".\..\..\names.txt");
             List<NameAndScore> successReturn = Program.ReadFileAndSaveIntoList(filename);
             successReturn.ForEach(i => Console.WriteLine(i.ToString()));
             List<NameAndScore> expectedList = new List<NameAndScore>();
